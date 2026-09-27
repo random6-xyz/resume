@@ -1,0 +1,21 @@
+from: markdown
+to: pdf
+standalone: true
+
+pdf-engine: xelatex
+
+variables:
+  documentclass: article
+  fontsize: 10pt
+  mainfont: "TeX Gyre Heros"
+  geometry:
+    - top=0.55in
+    - bottom=0.55in
+    - left=0.65in
+    - right=0.65in
+
+include-in-header:
+  - resume-header.tex
+
+filters:
+  - resume.lua

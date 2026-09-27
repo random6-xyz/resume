@@ -1,0 +1,140 @@
+% ============================================================
+% Packages
+% ============================================================
+
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+% ============================================================
+% Colors
+% ============================================================
+
+\definecolor{resumelink}{HTML}{28577A}
+\definecolor{resumegray}{HTML}{666666}
+\definecolor{sectionrule}{HTML}{B8B8B8}
+
+\AtBeginDocument{%
+  \hypersetup{
+    colorlinks=true,
+    urlcolor=resumelink,
+    linkcolor=resumelink,
+    citecolor=resumelink,
+    pdfborder={0 0 0}
+  }%
+
+  % Force visible hyperlink text to use resumelink.
+  \let\resumeoriginalhref\href
+  \renewcommand{\href}[2]{%
+    \resumeoriginalhref{#1}{\textcolor{resumelink}{#2}}%
+  }%
+}
+
+% ============================================================
+% Body typography
+% ============================================================
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+% Slightly relaxed compared with the previous version.
+\linespread{1.00}
+
+% ============================================================
+% Name — Markdown "#"
+% ============================================================
+
+\titleformat{\section}
+  {\centering\bfseries\fontsize{23pt}{27pt}\selectfont}
+  {}
+  {0pt}
+  {}
+
+\titlespacing*{\section}
+  {0pt}
+  {-10pt}
+  {2pt}
+
+% ============================================================
+% Resume sections — Markdown "##"
+% ============================================================
+
+\titleformat{\subsection}
+  {\bfseries\fontsize{13pt}{15.5pt}\selectfont}
+  {}
+  {0pt}
+  {}
+  [%
+    \vspace{2pt}%
+    \color{sectionrule}%
+    \titlerule%
+  ]
+
+\titlespacing*{\subsection}
+  {0pt}
+  {14pt}
+  {6pt}
+
+% ============================================================
+% Third-level headings — Markdown "###"
+% ============================================================
+
+\titleformat{\subsubsection}
+  {\bfseries\fontsize{10.8pt}{13pt}\selectfont}
+  {}
+  {0pt}
+  {}
+
+\titlespacing*{\subsubsection}
+  {0pt}
+  {8pt}
+  {3pt}
+
+% ============================================================
+% Subtitle
+% ============================================================
+
+\newcommand{\resumesubtitle}[1]{%
+  \begin{center}
+    \fontsize{11.8pt}{14.5pt}\selectfont
+    \bfseries
+    #1
+  \end{center}
+  \vspace{-1pt}
+}
+
+% ============================================================
+% Contact row
+% ============================================================
+
+\newcommand{\resumecontacts}[1]{%
+  \begin{center}
+    \fontsize{9.8pt}{12pt}\selectfont
+    #1
+  \end{center}
+  \vspace{-1pt}
+}
+
+% ============================================================
+% Lists
+% ============================================================
+
+\setlist[itemize]{
+  leftmargin=1.25em,
+  labelsep=0.45em,
+  itemsep=3pt,
+  topsep=4pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% ============================================================
+% Page
+% ============================================================
+
+\pagestyle{empty}
+
+\widowpenalty=10000
+\clubpenalty=10000
