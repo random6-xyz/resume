@@ -29,7 +29,7 @@ Open-source contributor focused on Linux eBPF verification and systems security.
 
 ## Technical focus
 
-**Languages:** Rust, C  
+**Languages:** Rust, C, Python
 **Systems and security:** Linux kernel, eBPF verifier, BPF selftests, endpoint telemetry, low-level security  
 **Tools and methods:** Aya, libbpf, LLVM/Clang, QEMU, Buildroot, fuzzing, differential testing
 
