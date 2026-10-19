@@ -1,6 +1,6 @@
 # Woojin Ji (random6)
 
-**Linux kernel & eBPF security | Rust / C**
+**Linux kernel & eBPF security | Rust / C / Python**
 
 [GitHub](https://github.com/random6-xyz) · [Technical blog](https://rust.random6.xyz/) · [Email](mailto:random6.xyz@gmail.com)
 
