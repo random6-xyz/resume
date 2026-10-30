@@ -6,14 +6,14 @@
 
 ## Profile
 
-Open-source contributor focused on Linux eBPF verification and systems security. Authored four commits in mainline Linux and two merged into bpf-next across the BPF verifier, selftests, and bpftool; builds Rust and C tooling for differential testing, kernel experiments, and endpoint telemetry.
+Open-source contributor focused on Linux eBPF verification and systems security. Authored six commits in mainline Linux across the BPF verifier, selftests, and bpftool; builds Rust and C tooling for differential testing, kernel experiments, and endpoint telemetry.
 
 ## Open-source contributions
 
 **Linux kernel, BPF subsystem** · 2026
 
 - **BPF verifier:** Preserved known-zero stack reads across scalar zero spills while tracking spill precision for sound pruning. Authored the [kernel fix](https://github.com/torvalds/linux/commit/69fdbe63e16919a885a8f9441e248ce0ddf15b25) and [regression selftests](https://github.com/torvalds/linux/commit/e693da913d2cdd69c1612fbf71bdf2b6771f6dba) ([patch series](https://lore.kernel.org/all/20260625-bpf-stack-var-off-zero-v1-v3-0-a068210a761b@gmail.com/)).
-- **BPF helper inlining (bpf-next):** [Fixed](https://github.com/torvalds/linux/commit/1c1dda9ba9f3af9cd511a197dcc86de2465d8fe5) `bpf_get_func_arg()` to zero-extend its 32-bit index before address calculation, preventing out-of-bounds context reads. Added [regression selftests](https://github.com/torvalds/linux/commit/38dbc3047a2fa706f6b4485679eb5eb62ff55b87) for upper index bits and out-of-range indices in `fexit` and `tp_btf` programs.
+- **BPF helper inlining:** [Fixed](https://github.com/torvalds/linux/commit/1c1dda9ba9f3af9cd511a197dcc86de2465d8fe5) `bpf_get_func_arg()` to zero-extend its 32-bit index before address calculation, preventing out-of-bounds context reads. Added [regression selftests](https://github.com/torvalds/linux/commit/38dbc3047a2fa706f6b4485679eb5eb62ff55b87) for upper index bits and out-of-range indices in `fexit` and `tp_btf` programs.
 - **BPF selftests:** Added an [arena regression test](https://github.com/torvalds/linux/commit/7bfb93e3475be9de894f1cecd3a727d3e1649b03) for a direct-value pseudo load at the one-past-end offset ([patch discussion](https://lore.kernel.org/all/20260612-arena-direct-value-v1-v4-1-b81b642f5277@gmail.com/)).
 - **bpftool:** [Fixed](https://github.com/torvalds/linux/commit/8a7f2bff2165e53595d1e91c160b340f978c0ab7) flow-dissector query handling to use libbpf's error code rather than `errno` after `close()`, preserving old-kernel compatibility ([patch discussion](https://lore.kernel.org/all/20260603003339.33791-1-random6.xyz@gmail.com/)).
 
